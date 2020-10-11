@@ -1,0 +1,20 @@
+type Farm{
+    id: ID!
+    name: String!
+    farmer: Farmer!
+}
+type Farmer{
+    fname: String!
+    lname: String!
+}
+input NewFarm{
+    name: String!
+}
+input NewFarmer{
+    fname: String!
+    lname: String!
+}
+type Mutation{
+    createFarm(input: NewFarm!): Farm!
+    createFarmer(input: NewFarmer!): String!
+}
